@@ -1,0 +1,11 @@
+﻿@model   ICollection<HeadacheCDSSWeb.Models.mPatInfo>
+<h2>病人列表</h2>
+<ul class="page">
+    @foreach (var item in Model)
+    {
+
+        <li>
+            @Html.ActionLink(@item.Name + "   " + @item.Sex, "ViewRecord", new { id = item.PatId })
+        </li>
+    }
+</ul>
